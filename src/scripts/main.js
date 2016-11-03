@@ -1,5 +1,5 @@
 //import 'babel-polyfill'
-import { test } from './module-1.js'
+import { query } from './module-1.js'
 //import { $, jQuery } from 'jquery'
 
-test()
+query()

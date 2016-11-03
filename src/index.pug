@@ -2,10 +2,18 @@ doctype html
 html(lang="en")
   head
     meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, intial-scale=1, maximum-scale=1, user-scalable=no')
     title= pageTitle
   body
-    h1 Pug - node template engine
+    nav.navbar.navbar-default
+      .container-fluid
+        .navbear-header
+          div.navbar-brand My Great App!
     .container
-      p.
-        Pug is a terse and simple templating language with a
-        strong focus on performance and powerful features.
+      p Uses:
+        ul
+          li Pug for templating
+          li Twitter Bootstrap for styles
+          li Babel for transpiling JavaScript
+          li Webpack for bundling
+      .well#target-well a well

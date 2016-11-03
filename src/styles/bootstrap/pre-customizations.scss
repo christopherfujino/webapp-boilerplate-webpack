@@ -1,0 +1,10 @@
+// Customize Bootstrap variables that get imported before the original Bootstrap variables.
+// Thus original Bootstrap variables can depend on values from here. All the bootstrap
+// variables are configured with !default, and thus, if you define the variable here, then
+// that value is used, rather than the default. However, many bootstrap variables are derived
+// from other bootstrap variables, and thus, you want to set this up before we load the
+// official bootstrap versions.
+// For example, _variables.scss contains:
+// $input-color: $gray !default;
+// This means you can define $input-color before we load _variables.scss
+

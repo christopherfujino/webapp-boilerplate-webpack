@@ -1,3 +1,5 @@
 import $ from 'jquery'
 
-export const test = () => $('body').append('Hello, world!')
+export const query = () => {
+  $('#target-well').text('This was injected by a JS module.')
+}
