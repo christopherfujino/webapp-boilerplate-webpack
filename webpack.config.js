@@ -1,5 +1,6 @@
 //const webpack = require('webpack')  // for uglifyjs
 const HtmlWebpackPlugin = require('html-webpack-plugin')  // for pug
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 let config = {
   entry: ['bootstrap-loader', './src/scripts/main.js'],
@@ -39,6 +40,13 @@ let config = {
     new HtmlWebpackPlugin({
       title: 'My WebApp',
       template: 'src/index.pug'
+    })
+    , new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 8080,
+      server: {
+        baseDir: ['dist']
+      }
     })
 /*
     , new webpack.optimize.UglifyJsPlugin({

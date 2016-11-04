@@ -13183,7 +13183,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var query = exports.query = function query() {
-	  (0, _jquery2.default)('#target-well').text('This was injected by a JS module.');
+	  (0, _jquery2.default)('#target-well').text('This text injected from JavaScript');
 	};
 
 /***/ }
