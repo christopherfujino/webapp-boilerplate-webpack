@@ -1,1 +1,1 @@
-- [  ] Remove css maps from production css bundle.
+- [ ] Remove css maps from production css bundle.
