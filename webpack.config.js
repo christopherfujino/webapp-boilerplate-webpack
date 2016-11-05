@@ -1,6 +1,7 @@
 //const webpack = require('webpack')  // for uglifyjs
 const HtmlWebpackPlugin = require('html-webpack-plugin')  // for pug
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')  // for exporting css
 
 let config = {
   entry: ['bootstrap-loader', './src/scripts/main.js'],
@@ -33,6 +34,10 @@ let config = {
         test: /\.(ttf|eot)$/,
         loader: 'file'
       }
+      ,{
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+      }
     ]
   },
 
@@ -41,6 +46,7 @@ let config = {
       title: 'My WebApp',
       template: 'src/index.pug'
     })
+    , new ExtractTextPlugin('styles.css')
     , new BrowserSyncPlugin({
       host: 'localhost',
       port: 8080,
